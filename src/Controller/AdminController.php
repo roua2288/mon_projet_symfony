@@ -11,12 +11,11 @@ class AdminController extends AbstractController
 {
     #[Route('/admin', name: 'admin_dashboard')]
     // #[IsGranted('ROLE_ADMIN')] // Temporairement désactivé pour les tests
-    public function dashboard(): Response
+    public function index(): Response
     {
-        return $this->render('admin/dashboard.html.twig', [
-            'page_title' => 'Tableau de bord Admin',
-        ]);
+        return $this->render('admin/index.html.twig');
     }
+
 
     #[Route('/admin/etudiants', name: 'admin_etudiants')]
     #[IsGranted('ROLE_ADMIN')]
@@ -49,10 +48,9 @@ class AdminController extends AbstractController
     #[IsGranted('ROLE_ADMIN')]
     public function classes(): Response
     {
-        return $this->render('admin/classes.html.twig', [
-            'page_title' => 'Gestion des Classes',
-        ]);
+        return $this->render('admin/classe/index.html.twig');
     }
+
 
     #[Route('/admin/annonces', name: 'admin_annonces')]
     #[IsGranted('ROLE_ADMIN')]

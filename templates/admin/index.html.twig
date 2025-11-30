@@ -1,20 +1,44 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Tableau de bord Admin{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h2><i class="fas fa-home"></i> Tableau de bord</h2>
+    <p>Bienvenue dans l'espace d'administration. Sélectionnez une section à gérer.</p>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/pc/mon_projet_symfony/src/Controller/AdminController.php</code></li>
-        <li>Your template at <code>C:/Users/pc/mon_projet_symfony/templates/admin/index.html.twig</code></li>
-    </ul>
-</div>
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h3><i class="fas fa-user-graduate"></i> Étudiants</h3>
+            <p>Gérez les comptes étudiants, les inscriptions et les informations personnelles.</p>
+            {#  <a href="{{ path('admin_etudiants') }}" class="btn btn-primary">
+                <i class="fas fa-arrow-right"></i> Accéder
+            </a>#}
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-chalkboard-teacher"></i> Enseignants</h3>
+            <p>Gérez les comptes enseignants et leurs affectations aux différentes classes.</p>
+            {#  <a href="{{ path('admin_enseignants') }}" class="btn btn-primary">
+                <i class="fas fa-arrow-right"></i> Accéder
+            </a>#}
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-calendar-alt"></i> Emplois du temps</h3>
+            <p>Créez et modifiez les emplois du temps des classes et des enseignants.</p>
+            <a href="{{ path('admin_emplois') }}" class="btn btn-primary">
+                <i class="fas fa-arrow-right"></i> Accéder
+            </a>
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-users"></i> Classes</h3>
+            <p>Gérez les classes, les associations étudiants/enseignants et les groupes.</p>
+            <a href="{{ path('admin_classes_index') }}" class="btn btn-primary">Gestion des classes</a>
+        </div>
+
+    </div>
+
 {% endblock %}

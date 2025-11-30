@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}TekUP{% endblock %}</title>
-    <link rel="icon" href="{{ asset('images/logo.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% block stylesheets %}
-        {{ importmap() }}
-        <link rel="stylesheet" href="{{ asset('styles/cssstyle.css') }}">
-        {# Ajoutez d'autres CSS selon la page #}
-    {% endblock %}
+    <title>{% block title %}TEKUP Admin{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/tekup/css/adminCss.css">
 </head>
-<body>
-{% block body %}{% endblock %}
 
-{% block javascripts %}
-    {{ importmap('app') }}
-{% endblock %}
+<body>
+
+<header>
+    <div class="user-info">
+        <i class="fas fa-user-shield"></i>
+        <span>Administrateur</span>
+    </div>
+
+    <h1>Tableau de bord Admin</h1>
+
+    <a href="/logout" class="btn btn-danger">
+        <i class="fas fa-sign-out-alt"></i> Déconnexion
+    </a>
+</header>
+
+<nav class="admin-nav">
+    <ul>
+        <li><a href="{{ path('admin_dashboard') }}" class="active"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+        {#   <li><a href="{{ path('admin_etudiants') }}"><i class="fas fa-user-graduate"></i> Étudiants</a></li>
+        <li><a href="{{ path('admin_enseignants') }}"><i class="fas fa-chalkboard-teacher"></i> Enseignants</a></li>
+        <li><a href="{{ path('admin_emplois') }}"><i class="fas fa-calendar-alt"></i> Emplois du temps</a></li> #}
+        <li><a href="{{ path('admin_classes_index') }}" class="btn btn-primary">Gestion des classes</a></li>    </ul>
+</nav>
+
+<main>
+    {% block body %}{% endblock %}
+</main>
+
 </body>
 </html>
