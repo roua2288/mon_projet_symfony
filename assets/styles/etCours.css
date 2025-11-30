@@ -1,0 +1,199 @@
+        :root {
+            --primary-color: #0056b3;
+            --primary-light: #e6f0ff;
+            --secondary-color: #4CAF50;
+            --secondary-light: #e8f5e9;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --white: #ffffff;
+            --gray: #f5f5f5;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+            color: var(--dark-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(0, 86, 179, 0.1);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        nav a:hover {
+            background: var(--primary-light);
+            color: var(--primary-color);
+        }
+        
+        .logout a {
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            text-decoration: none;
+        }
+        
+        .logout a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+            background: #3d8b40;
+        }
+        
+        main {
+            flex: 1;
+            padding: 3rem 5%;
+        }
+        
+        .welcome-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.1);
+        }
+        
+        .welcome-card h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .cours-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .cours-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.1);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .cours-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 86, 179, 0.2);
+        }
+        
+        .cours-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .cours-card p {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .cours-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+        
+        .download-btn:hover {
+            background: #3d8b40;
+        }
+        
+        .no-cours {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            box-shadow: 0 -4px 20px rgba(0, 86, 179, 0.1);
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .logout {
+                margin-top: 1rem;
+            }
+            
+            .cours-container {
+                grid-template-columns: 1fr;
+            }
+        }

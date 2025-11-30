@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}TekUP{% endblock %}</title>
+    <link rel="icon" href="{{ asset('images/logo.png') }}">
+
+    {% block stylesheets %}
+        {{ importmap() }}
+        <link rel="stylesheet" href="{{ asset('styles/cssstyle.css') }}">
+        {# Ajoutez d'autres CSS selon la page #}
+    {% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+
+{% block javascripts %}
+    {{ importmap('app') }}
+{% endblock %}
+</body>
+</html>

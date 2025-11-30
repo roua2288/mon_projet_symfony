@@ -1,0 +1,273 @@
+     :root {
+            --primary-color: #0056b3;
+            --primary-light: #e6f0ff;
+            --secondary-color: #ff6b6b;
+            --secondary-light: #ffebee;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --white: #ffffff;
+            --gray: #f5f5f5;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+            color: var(--dark-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(0, 86, 179, 0.1);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        nav a:hover {
+            background: var(--primary-light);
+            color: var(--primary-color);
+        }
+        
+        /* Bouton de déconnexion */
+        .logout a {
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            text-decoration: none;
+        }
+        
+        .logout a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            background: #e05555;
+        }
+        
+        /* Contenu principal */
+        main {
+            flex: 1;
+            padding: 3rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        /* Titre principal */
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        /* Carte des absences */
+        .absences-container {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.1);
+            position: relative;
+        }
+        
+        .absences-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 16px 16px 0 0;
+        }
+        
+        /* Tableau des absences */
+        .absences-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+        
+        .absences-table th, 
+        .absences-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .absences-table th {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+        
+        .absences-table tr:nth-child(even) {
+            background-color: var(--light-color);
+        }
+        
+        .absences-table tr:hover {
+            background-color: var(--primary-light);
+        }
+        
+        .absence-date {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .absence-prof {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .absence-motif {
+            max-width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.65rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 50px;
+        }
+        
+        .badge-primary {
+            color: var(--white);
+            background-color: var(--primary-color);
+        }
+        
+        .badge-secondary {
+            color: var(--white);
+            background-color: var(--secondary-color);
+        }
+        
+        /* Message quand pas d'absences */
+        .no-absences {
+            text-align: center;
+            padding: 2rem;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+        }
+        
+        /* Animation de fond */
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary-color);
+            top: -100px;
+            left: -100px;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: var(--secondary-color);
+            bottom: -50px;
+            right: -50px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .logout {
+                margin-top: 1rem;
+            }
+            
+            main {
+                padding: 2rem;
+            }
+            
+            .absences-container {
+                padding: 1.5rem;
+                overflow-x: auto;
+            }
+            
+            .absences-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
