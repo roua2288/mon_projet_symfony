@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plateforme Universitaire Tek-Up - Excellence en Formation</title>
+    <meta name="description" content="Tek-Up Université - Formations en Informatique, Réseaux, Cloud Computing et Systèmes Embarqués">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('css/cssstyle.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}" />
+</head>
+<body>
+	<header class="header">
+    <div class="container">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <img src="{{ asset('images/logo.png') }}" alt="Tek-Up Logo" width="120">
+            </a>
+            
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                    <li><a href="#apropos" class="nav-link">À propos</a></li>
+                    <li><a href="#formations" class="nav-link">Formations</a></li>
+                    <li><a href="#equipe" class="nav-link">Équipe</a></li>
+                    <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#localisation" class="nav-link">Localisation</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-sign-in-alt"></i> Se connecter <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                        <div class="dropdown-content">
+    <a href="/connexion.php" class="dropdown-item">
+        <i class="fas fa-sign-in-alt"></i> Connexion unique
+    </a>
+</div>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInUp">
+                <h1>L'excellence académique à portée de main</h1>
+                <p class="subtitle">Formez-vous aux métiers d'avenir avec nos programmes innovants</p>
+                <div class="hero-btns">
+                    <a href="#formations" class="btn btn-primary">Découvrir nos formations</a>
+                    <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <a href="#apropos"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+    <!-- À propos Section -->
+    <section id="apropos" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate__animated animate__fadeIn">À propos de <span>Tek-Up</span></h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Notre engagement pour votre réussite</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text animate__animated animate__fadeInLeft">
+                    <h3>Une institution d'excellence</h3>
+                    <p>Fondée en 2010, Tek-Up s'est imposée comme une référence dans l'enseignement supérieur en Tunisie, avec des programmes axés sur l'innovation technologique et l'employabilité.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Diplômes reconnus</h4>
+                            <p>Nos diplômes sont accrédités par le Ministère de l'Enseignement Supérieur</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h4>Pédagogie innovante</h4>
+                            <p>Méthodes d'enseignement actives centrées sur l'apprenant</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Insertion professionnelle</h4>
+                            <p>90% de nos diplômés trouvent un emploi dans les 6 mois</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image animate__animated animate__fadeInRight">
+                    <img src="{{ asset('images/hero-bg.webp') }}" alt="Étudiants Tek-Up" class="about-img">
+                    <div class="experience-badge">
+                        <span>13+</span>
+                        <p>Années d'expérience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Formations Section -->
+    <section id="formations" class="section programs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate__animated animate__fadeIn">Nos <span>Formations</span></h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Des programmes conçus pour les métiers de demain</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card animate__animated animate__fadeInUp">
+                    <div class="program-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Sécurité des Systèmes informatiques et Réseaux (SSIR-2)</h3>
+                    <p>Maîtrise des architectures réseaux, cybersécurité et systèmes de télécommunications.
+                        </p>
+                    <ul class="program-details">
+                        <li><i class="fas fa-clock"></i> 3 ans</li>
+                        <li><i class="fas fa-certificate"></i> cycle</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">En savoir plus</a>
+                </div>
+                
+                <div class="program-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="program-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Développement Mobile et Systéme Embarqués(DMSE-2)</h3>
+                    <p>Formation complète en développement logiciel, algorithmique et systèmes d'information.</p>
+                    <ul class="program-details">
+                        <li><i class="fas fa-clock"></i> 3 ans</li>
+                        <li><i class="fas fa-certificate"></i> cycle</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">En savoir plus</a>
+                </div>
+                
+                <div class="program-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="program-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Génie Logiciel et Systémes d'information</h3>
+                    <p>Compétences en développement temps réel, programmation bas niveau (C/C++), et conception de solutions embarquées fiables et optimisées.</p>
+                    <ul class="program-details">
+                        <li><i class="fas fa-clock"></i> 3 ans</li>
+                        <li><i class="fas fa-certificate"></i> cycle</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">En savoir plus</a>
+                </div>
+                
+                <div class="program-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                    <div class="program-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>IoT</h3>
+                    <p>Conception et développement de systèmes embarqués et IoT.</p>
+                    <ul class="program-details">
+                        <li><i class="fas fa-clock"></i> 3 ans</li>
+                        <li><i class="fas fa-certificate"></i> cycle</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-40">
+                <a href="#" class="btn btn-primary">Voir toutes les formations</a>
+            </div>
+        </div>
+    </section>
+    <!-- Équipe Section -->
+    <section id="equipe" class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate__animated animate__fadeIn">Notre <span>Équipe</span></h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Des enseignants-chercheurs experts dans leurs domaines</p>
+            </div>
+            
+            <div class="team-slider">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="{{ asset('images/prof1.webp') }}" alt="Dr. A. Ben Ali">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. A. Ben Ali</h3>
+                        <p>Professeur en Informatique</p>
+                        <span>PhD en Intelligence Artificielle</span>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="{{ asset('images/prof2.webp') }}" alt="Dr. S. Trabelsi">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. S. Trabelsi</h3>
+                        <p>Professeur en Réseaux</p>
+                        <span>Expert en Cybersécurité</span>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="{{ asset('images/prof1.webp') }}" alt="Dr. N. Jaziri">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. N. Jaziri</h3>
+                        <p>Professeur en Cloud</p>
+                        <span>Spécialiste AWS & Azure</span>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="{{ asset('images/prof2.webp') }}" alt="Dr. M. Gharbi">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. M. Gharbi</h3>
+                        <p>Professeur en SGBD</p>
+                        <span>Expert Big Data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Statistiques Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <div class="counter" data-target="2500">0</div>
+                    <p>Étudiants diplômés</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="counter" data-target="45">0</div>
+                    <p>Enseignants experts</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <div class="counter" data-target="12">0</div>
+                    <p>Partenaires industriels</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-trophy"></i>
+                    <div class="counter" data-target="18">0</div>
+                    <p>Prix académiques</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Galerie Section -->
+    <section id="galerie" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate__animated animate__fadeIn">Galerie <span>Photos</span></h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Découvrez la vie à Tek-Up</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-slider">
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/compus.webp') }}" data-lightbox="gallery" data-title="Campus Tek-Up">
+                            <img src="{{ asset('images/compus.webp') }}" alt="Campus Tek-Up">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/evenetud.jpg') }}" data-lightbox="gallery" data-title="Étudiants en cours">
+                            <img src="{{ asset('images/evenetud.jpg') }}" alt="Étudiants en cours">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/labo.jpg') }}" data-lightbox="gallery" data-title="Laboratoire informatique">
+                            <img src="{{ asset('images/labo.jpg') }}" alt="Laboratoire informatique">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                   
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/etudiants.jpg') }}" data-lightbox="gallery" data-title="Cérémonie de remise des diplômes">
+                            <img src="{{ asset('images/etudiants.jpg') }}" alt="Cérémonie de remise des diplômes">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/evenetud.jpg') }}" data-lightbox="gallery" data-title="Événement étudiant">
+                            <img src="{{ asset('images/evenetud.jpg') }}" alt="Événement étudiant">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="gallery-controls">
+                    <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate__animated animate__fadeIn">Nous <span>Contacter</span></h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Une question ? Nous sommes à votre écoute</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info animate__animated animate__fadeInLeft">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Rue de la Technologie, 2080, Ariana, Tunisie</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+216 70 123 456</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@tekup.tn</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horaires</h4>
+                            <p>Lundi-Vendredi: 8h-18h<br>Samedi: 9h-13h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form animate__animated animate__fadeInRight">
+                    <form id="contactForm" action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Votre nom complet" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre adresse email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Sujet de votre message">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Localisation Section -->
+    <section id="localisation" class="section location-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate__animated animate__fadeIn">Notre <span>Localisation</span></h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Venez nous rencontrer sur notre campus</p>
+            </div>
+            
+            <div class="map-container animate__animated animate__fadeInUp">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12762.747705987724!2d10.1798089!3d36.8978372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34cc25bd5aff%3A0x495e852ae57f3ff5!2sTEK-UP%20University!5e0!3m2!1sfr!2stn!4v1764434418166!5m2!1sfr!2stn" 
+                  width="100%" 
+                  height="450" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="{{ asset('images/logo.png') }}" alt="Tek-Up Logo" class="footer-logo" height="50">
+                    <p>Tek-Up est une institution d'excellence dédiée à la formation et à l'innovation technologique.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#formations">Formations</a></li>
+                        <li><a href="#equipe">Équipe</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <ul>
+                        <li><a href="#">Informatique</a></li>
+                        <li><a href="#">Réseaux & Télécoms</a></li>
+                        <li><a href="#">Cloud Computing</a></li>
+                        <li><a href="#">Systèmes Embarqués</a></li>
+                        <li><a href="#">Formations continues</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Abonnez-vous pour recevoir nos actualités.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Tek-Up Université. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#accueil" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('js/lightbox.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+</body>
+</html>
