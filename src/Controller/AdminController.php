@@ -13,7 +13,11 @@ class AdminController extends AbstractController
     // #[IsGranted('ROLE_ADMIN')] // Temporairement désactivé pour les tests
     public function index(): Response
     {
-        return $this->render('admin/index.html.twig');
+
+        return $this->render('admin/index.html.twig', [
+            'page_title' => 'Tableau de bord Admin',
+        ]);
+
     }
 
 
